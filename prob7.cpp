@@ -3,17 +3,23 @@ using namespace std;
 
 int main ()
 {
-    int arr [5] = {1,3,4,};
-    int i;
-    cin >> i;
-    if ((i <= 1 || i > 2) && (i % 2 == 0))
+    int num, org;
+    cin >> num;
+    org = num;
+    int rev = 0, rem;
+    while (num > 0)
     {
-        cout << i << "is not a Prime number.\n";
+        rem = num % 10;
+        rev = rev * 10 + rem;
+        num /= 10;
     }
-    else if (i == 2)
+
+    if (rev == org)
     {
-        cout << i << "is a prime number.\n";
+        cout << "num is palindrone.\n";
     }
+    else
+    cout << "num is not a palindrone.\n";
 return 0;
 
 }
