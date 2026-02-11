@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-
+/*
 void add (int a, int b)
 {
     int add = 0;
@@ -34,16 +34,44 @@ void divi (int a, int b)
     cout << "division of a & b is: " << div << endl;
     }
 }
-
+*/
 int main ()
 {
-    int x, y;
+    double x, y, result;
+    char op;
+    cout << "enter numbers.\n";
     cin >> x;
     cin >> y;
+    cout << " enter operator: "<< op << endl;
+    cin >> op;
+    switch (op)
+    {
+        case '+':
+        result = x + y;
+        break;
+        
+        case '-':
+        result = x - y;
+        break;
 
+        case '*':
+        result = x * y;
+        break;
+
+        case '/':
+        result = x / y;
+        break;
+
+        default:
+        cout << "ERROR, operator is not correct.\n";
+        }
+
+        cout << "result is: " << result << endl;
+        /*
     add (x, y);
     sub (x, y);
     mul (x, y);
     divi (x, y);
+    */
     return 0;
 }
